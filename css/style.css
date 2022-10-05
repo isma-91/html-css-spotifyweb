@@ -35,6 +35,9 @@ main {
 }
 
 aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   width: 50px;
   background-color: black;
@@ -62,6 +65,25 @@ aside a {
   margin-bottom: 5px;
 }
 
+.profile.hidden {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile .download {
+  max-width: 20px;
+  margin-bottom: 20px;
+}
+
+.profile .me {
+  max-width: 30px;
+}
+
+.shown {
+  display: none;
+}
+
 .content {
   height: 100%;
   width: calc(100vw - 50px);
@@ -71,6 +93,7 @@ aside a {
 footer {
   background-color: #282828;
   height: 90px;
+  z-index: 99;
 }
 
 @media (min-width: 639px) {
@@ -92,18 +115,51 @@ footer {
 
   .aside-container {
     display: block;
+    margin: 15px;
   }
 
   .logo-big {
     max-width: 70%;
+    margin-bottom: 20px;
   }
 
-  .aside-container .mobile-icons a {
+  .aside-container a {
     display: flex;
     align-items: center;
   }
 
   .aside-container .mobile-icons img {
-    margin-right: 3px;
+    margin-right: 5px;
+  }
+
+  .playlist h4 {
+    margin-top: 20px;
+  }
+
+  .playlist li {
+    padding: 10px 0;
+  }
+
+  .add {
+    font-size: 50px;
+    margin-right: 5px;
+  }
+
+  .profile.hidden {
+    display: none;
+  }
+
+  .profile.shown {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile.shown .download {
+    width: 100%;
+  }
+  .profile.shown a {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
   }
 }
