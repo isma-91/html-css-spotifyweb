@@ -25,8 +25,16 @@ a {
   flex-direction: row-reverse;
   height: 90px;
   width: calc(100vw - 50px);
-  background-color: black;
-  opacity: 0.3;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 5px;
+}
+
+.btn-upgrade {
+  color: white;
+  border: 2px solid white;
+  padding: 1rem 3rem;
+  border-radius: 100px;
+  white-space: nowrap;
 }
 
 main {
@@ -65,19 +73,31 @@ aside a {
   margin-bottom: 5px;
 }
 
-.profile.hidden {
+.profile.hidden a {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.profile .download {
-  max-width: 20px;
-  margin-bottom: 20px;
+.profile a {
+  padding: 5px 0;
 }
 
-.profile .me {
-  max-width: 30px;
+.img-download-container {
+  width: 20px;
+}
+
+.img-me-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: grey;
+  border-radius: 50px;
+}
+
+.img-me-container img {
+  max-width: 60%;
 }
 
 .shown {
@@ -99,6 +119,7 @@ footer {
 @media (min-width: 639px) {
   aside {
     width: 230px;
+    padding: 15px;
   }
 
   .pop-up {
@@ -115,7 +136,6 @@ footer {
 
   .aside-container {
     display: block;
-    margin: 15px;
   }
 
   .logo-big {
@@ -154,12 +174,26 @@ footer {
     flex-direction: column;
   }
 
-  .profile.shown .download {
-    width: 100%;
-  }
   .profile.shown a {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .profile.shown a span {
+    padding-left: 10px;
+  }
+
+  .hr::after {
+    display: block;
+    content: "";
     width: 100%;
+    border-bottom: 2px solid #e1e1e3;
+    margin-top: 10px;
+  }
+
+  .name {
+    color: white;
+    font-weight: bold;
   }
 }
