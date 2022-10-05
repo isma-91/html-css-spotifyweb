@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pop-up {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  height: 80px;
+  width: calc(100vw - 420px);
+  background-color: black;
+  opacity: 0.3;
+}
+
+main {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+aside {
+  height: 100%;
+  width: 420px;
+  background-color: black;
+}
+
+.content {
+  height: 100%;
+  width: calc(100vw - 420px);
+  background-color: #141922;
+}
+
+footer {
+  background-color: #282828;
+  height: 80px;
+}
