@@ -108,6 +108,28 @@ aside a {
   height: 100%;
   width: calc(100vw - 50px);
   background-color: #141922;
+  padding: 0 20px;
+  padding-top: 120px;
+}
+
+.content nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.content nav li {
+  display: flex;
+  /* flex: 0 1 calc(100% / 4 - 30px * 3); */
+}
+/*funziona davvero male il calc in questo contesto, ne mette 4 ma se allarghi a qualche misura ne mette 5 su una riga, me se continui ad allargare ne rimette 4. È un problema della lista o ho sbagliato io qualcosa?*/
+
+.content nav a {
+  width: 100%;
+  color: #7d7f84;
+  white-space: nowrap;
+  font-weight: bold;
 }
 
 footer {
