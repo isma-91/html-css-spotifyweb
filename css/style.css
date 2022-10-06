@@ -44,7 +44,7 @@ main {
 }
 
 aside {
-  height: 100%;
+  height: calc(100vh - 90px);
   width: 50px;
   background-color: black;
   color: white;
@@ -60,6 +60,8 @@ aside nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 10;
+  font-size: 14px;
 }
 
 .aside-container {
@@ -160,9 +162,9 @@ aside nav {
 }
 
 .card {
-  width: calc((100% / 2) - 10px / 2);
+  width: calc((100% - 10px) / 2);
   text-align: center;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   margin-top: 15px;
 }
 
@@ -191,9 +193,124 @@ aside nav {
 
 /* Multimedia Bar Styles */
 footer {
+  display: flex;
+  justify-content: space-between;
   background-color: #282828;
+  color: white;
   height: 90px;
+  position: relative;
   z-index: 99;
+  padding: 5px 10px;
+}
+
+footer a {
+  color: white;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.track-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 0.8em;
+}
+
+.track-container img {
+  height: 50%;
+}
+
+.author {
+  margin-left: 10px;
+}
+
+.info {
+  color: #7d7f84;
+  margin-top: 5px;
+}
+
+.like-folder {
+  margin-left: 20px;
+}
+
+.like-folder .icon {
+  display: block;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.multimedia-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 auto;
+  margin-left: 30px;
+  margin-right: 5px;
+}
+.comands {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.comands .icon {
+  font-size: 20px;
+  margin: 0 12px;
+}
+
+.comands .icon.play {
+  font-size: 30px;
+}
+
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  font-size: 10px;
+  margin-top: 15px;
+}
+
+.timeline .duration {
+  height: 5px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #5a5a5a;
+  border-radius: 10px;
+  margin: 0 10px;
+  position: relative;
+}
+
+.timeline .duration .current-time {
+  width: 25%;
+  height: 100%;
+  color: red;
+}
+
+.settings-container {
+  display: flex;
+  align-items: center;
+  width: 200px;
+}
+
+.settings-container .icon {
+  margin: 0 5px;
+  font-size: 10px;
+}
+
+.audio-bar {
+  height: 5px;
+  width: 100%;
+  background-color: #5a5a5a;
+  border-radius: 10px;
+}
+
+.audio-bar .current-audio {
+  height: 100%;
+  width: 25%;
+  color: white;
 }
 
 @media (min-width: 639px) {
@@ -276,11 +393,27 @@ footer {
     color: white;
     font-weight: bold;
   }
+
+  .title {
+    display: flex;
+  }
+
+  .info-name {
+    margin-left: 5px;
+  }
+
+  .track-container img {
+    height: 70%;
+  }
 }
 
 @media (min-width: 878px) {
   .card {
-    width: calc(100% / 4 - 10px * 3);
+    width: calc((100% - 10px * 3) / 4);
+  }
+
+  .like-folder {
+    display: flex;
   }
 }
 
@@ -290,6 +423,6 @@ footer {
     gap: 15px;
   }
   .card {
-    width: calc(100% / 6 - 15px * 2);
+    width: calc((100% - 15px * 5) / 6);
   }
 }
