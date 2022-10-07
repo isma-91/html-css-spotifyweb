@@ -54,6 +54,7 @@ aside {
   background-color: black;
   color: white;
   padding: 5px 10px;
+  font-weight: bold;
 }
 
 aside a {
@@ -87,6 +88,7 @@ aside nav {
 
 .mobile-icons svg {
   max-width: 30px;
+  margin-right: 5px;
 }
 
 .logo-small {
@@ -452,7 +454,7 @@ footer a {
 
   .add {
     font-size: 50px;
-    margin-right: 5px;
+    margin-right: 10px;
   }
 
   .profile.hidden {
