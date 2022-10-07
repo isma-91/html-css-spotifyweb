@@ -519,3 +519,89 @@ footer a {
     width: calc((100% - 15px * 5) / 6);
   }
 }
+
+@media (max-width: 505px) {
+  .pop-up {
+    height: 60px;
+    justify-content: center;
+  }
+
+  .btn-upgrade {
+    color: white;
+    border: 1px solid white;
+    padding: 0.5rem 2rem;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+
+  aside {
+    z-index: 30;
+    width: 60px;
+  }
+  aside nav {
+    align-items: center;
+  }
+
+  .content {
+    padding-top: 80px;
+  }
+  .content nav {
+    font-size: 14px;
+  }
+
+  .content nav ul {
+    gap: 15px;
+  }
+
+  .container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .container .card {
+    width: 85%;
+  }
+
+  footer {
+    z-index: 99;
+  }
+  .track-container {
+    flex-direction: column;
+    position: absolute;
+    align-items: flex-start;
+    z-index: 50;
+    left: 0px;
+    top: -230px;
+    border-top: 2px solid greenyellow;
+    border-bottom: 2px solid greenyellow;
+    height: auto;
+    width: 60px;
+    padding: 5px 0;
+  }
+
+  .like-folder {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+  }
+
+  .track-container img {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+  }
+
+  .multimedia-container {
+    margin-left: 0;
+  }
+  .settings-container {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .settings-container .icon {
+    padding: 3px 0;
+  }
+}
