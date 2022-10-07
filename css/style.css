@@ -537,6 +537,7 @@ footer a {
   aside {
     z-index: 30;
     width: 60px;
+    padding-top: 20px;
   }
   aside nav {
     align-items: center;
@@ -573,9 +574,9 @@ footer a {
     z-index: 50;
     left: 0px;
     top: -230px;
-    background-color: #282828;
-    border-top: 2px solid #c1c1c1;
-    border-bottom: 2px solid #c1c1c1;
+    background-color: rgba(40, 40, 40, 0.7);
+    border-top: 2px solid greenyellow;
+    border-bottom: 2px solid greenyellow;
     height: auto;
     width: 60px;
     padding: 5px 0;
