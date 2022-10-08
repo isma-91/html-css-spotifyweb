@@ -468,12 +468,21 @@ footer a {
 
   .profile.shown a {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
+  }
+
+  .jhon {
+    display: flex;
+    align-items: center;
   }
 
   .profile.shown a span {
     padding-left: 10px;
+  }
+
+  .img-download-container {
+    display: flex;
+    align-items: center;
   }
 
   .hr::after {
@@ -512,7 +521,6 @@ footer a {
   }
 }
 
-/* CALC DA RISPIEGARE BENISSIMO... NON CI HO CAPITO NULLA */
 @media (min-width: 1440px) {
   .container {
     gap: 15px;
@@ -543,6 +551,10 @@ footer a {
   }
   aside nav {
     align-items: center;
+  }
+
+  .mobile-icons.hidden {
+    width: 80%;
   }
 
   .content {
